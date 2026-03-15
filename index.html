@@ -10,7 +10,7 @@ body {
     margin:0;
     min-height:100vh;
     font-family:Arial;
-    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                url("https://i.postimg.cc/BP3V7JPj/IMG-0397.jpg") no-repeat center center fixed;
     background-size:cover;
     display:flex;
@@ -47,7 +47,7 @@ body {
     border-radius:50%;
     object-fit:cover;
     margin-bottom:15px;
-    border:3px solid #229ED9;
+    border:3px solid #4CAF50;
     animation: avatarPulse 2s infinite alternate;
 }
 
@@ -69,21 +69,22 @@ body {
     align-items:center;
     justify-content:center;
     gap:12px;
-    width:100%;
-    background:linear-gradient(45deg, #229ED9, #1a8ac0);
+    width:100%; /* Кнопки на всю ширину */
+    background:rgba(76,175,80,0.7); /* зелёный с прозрачностью */
     color:white;
     text-decoration:none;
     padding:16px;
-    margin:12px 0;
+    margin:10px 0; /* ровные отступы */
     border-radius:12px;
     font-size:18px;
     transition:0.3s;
     box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px); /* фон под кнопкой слегка размытый */
 }
 
 .button:hover {
     transform:scale(1.05);
-    background:linear-gradient(45deg, #1a8ac0, #0077a3);
+    background:rgba(76,175,80,0.9);
     box-shadow:0 6px 15px rgba(0,0,0,0.4);
 }
 
@@ -125,7 +126,7 @@ SUPPORT
 </div>
 
 <script>
-// === Меняешь ссылки здесь ===
+// === Здесь меняешь ссылки кнопок ===
 let links = {
   operator: "https://t.me/wizccc",
   bot247: "https://t.me/pzwzbot",
