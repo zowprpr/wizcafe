@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>WIZCAFE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin:0;
+    min-height:100vh;
+    font-family:Arial;
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+               url("https://i.postimg.cc/BP3V7JPj/IMG-0397.jpg") no-repeat center center fixed;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation: backgroundShift 30s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundShift {
+    0% { background-position: center top; }
+    50% { background-position: center center; }
+    100% { background-position: center bottom; }
+}
+
+.card {
+    background: rgba(0,0,0,0.65);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    animation: cardPop 1s ease-out;
+}
+
+@keyframes cardPop {
+    0% { transform: scale(0.8); opacity:0; }
+    100% { transform: scale(1); opacity:1; }
+}
+
+.avatar {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+    border:3px solid #229ED9;
+    animation: avatarPulse 2s infinite alternate;
+}
+
+@keyframes avatarPulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+.name {
+    color:white;
+    font-size:28px;
+    margin-bottom:25px;
+    font-weight:bold;
+    text-shadow: 1px 1px 5px black;
+}
+
+.button {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    width:100%;
+    background:linear-gradient(45deg, #229ED9, #1a8ac0);
+    color:white;
+    text-decoration:none;
+    padding:16px;
+    margin:12px 0;
+    border-radius:12px;
+    font-size:18px;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.button:hover {
+    transform:scale(1.05);
+    background:linear-gradient(45deg, #1a8ac0, #0077a3);
+    box-shadow:0 6px 15px rgba(0,0,0,0.4);
+}
+
+.icon {
+    width:24px;
+    flex-shrink:0;
+}
+
+@media (max-width: 480px){
+    .name { font-size:24px; }
+    .button { font-size:16px; padding:14px; }
+    .icon { width:20px; }
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+
+<img src="https://i.postimg.cc/BP3V7JPj/IMG-0397.jpg" class="avatar">
+
+<div class="name">WIZCAFE</div>
+
+<a id="btn1" target="_blank" class="button">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+ОПЕРАТОР
+</a>
+
+<a id="btn2" target="_blank" class="button">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+БОТ 24/7
+</a>
+
+<a id="btn3" target="_blank" class="button">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+SUPPORT
+</a>
+
+</div>
+
+<script>
+// === Меняешь ссылки здесь ===
+let links = {
+  operator: "https://t.me/wizccc",
+  bot247: "https://t.me/pzwzbot",
+  support: "https://t.me/wzsp_bot"
+};
+
+document.getElementById('btn1').href = links.operator;
+document.getElementById('btn2').href = links.bot247;
+document.getElementById('btn3').href = links.support;
+</script>
+
+</body>
+</html>
